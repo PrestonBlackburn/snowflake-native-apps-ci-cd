@@ -1,0 +1,1113 @@
+INFO:snowflake.connector.connection:Snowflake Connector for Python Version: 2.9.0, Python Version: 3.8.3, Platform: Windows-10-10.0.22000-SP0
+INFO:snowflake.connector.connection:This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+INFO:snowflake.connector.connection:Setting use_openssl_only mode to False
+INFO:snowflake.snowpark.session:Snowpark Session information: 
+"version" : 1.3.0,
+"python.version" : 3.8.3,
+"python.connector.version" : 2.9.0,
+"python.connector.session.id" : 1245909883187302,
+"os.name" : Windows
+
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION PACKAGE IF NOT EXISTS IDENTIFIER('"DEV_CHURN_PREDICTION_PACKA...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [USE DATABASE DEV_CHURN_PREDICTION_PACKAGE]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE SCHEMA churn]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE STAGE churn_prediction_stage DIRECTORY = ( ENABLE = true ) COM...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create schema if not exists dev_churn_prediction_package.shared_content_schema]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create or replace view dev_churn_prediction_package.shared_content_schema.TELCO_...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant usage on schema dev_churn_prediction_package.shared_content_schema to shar...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant reference_usage on database CUSTOMER_DB to share in application package de...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant select on view dev_churn_prediction_package.shared_content_schema.TELCO_UN...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [GET '@CUSTOMER_DB.CHURN.MODELS/regressor.pkl' 'file://app/src/libraries/models' ...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/manifest.yml' '@dev_churn_prediction_package.churn.churn_pre...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/environment.yml' '@dev_churn_prediction_package.ch...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/procs.py' '@dev_churn_prediction_package.churn.chu...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/streamlit.py' '@dev_churn_prediction_package.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/udf.py' '@dev_churn_prediction_package.churn.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/models/regressor.pkl' '@dev_churn_prediction_packa...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/scripts/setup.sql' '@dev_churn_prediction_package.churn.chur...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION dev_churn_prediction_package_APP FROM APPLICATION PACKAGE dev...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.connection:Snowflake Connector for Python Version: 2.9.0, Python Version: 3.8.3, Platform: Windows-10-10.0.22000-SP0
+INFO:snowflake.connector.connection:This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+INFO:snowflake.connector.connection:Setting use_openssl_only mode to False
+INFO:snowflake.snowpark.session:Snowpark Session information: 
+"version" : 1.3.0,
+"python.version" : 3.8.3,
+"python.connector.version" : 2.9.0,
+"python.connector.session.id" : 1245909883191374,
+"os.name" : Windows
+
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION PACKAGE IF NOT EXISTS IDENTIFIER('"DEV_CHURN_PREDICTION_PACKA...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [USE DATABASE DEV_CHURN_PREDICTION_PACKAGE]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE SCHEMA churn]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE STAGE churn_prediction_stage DIRECTORY = ( ENABLE = true ) COM...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create schema if not exists dev_churn_prediction_package.shared_content_schema]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create or replace view dev_churn_prediction_package.shared_content_schema.TELCO_...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant usage on schema dev_churn_prediction_package.shared_content_schema to shar...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant reference_usage on database CUSTOMER_DB to share in application package de...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant select on view dev_churn_prediction_package.shared_content_schema.TELCO_UN...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [GET '@CUSTOMER_DB.CHURN.MODELS/regressor.pkl' 'file://app/src/libraries/models' ...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/manifest.yml' '@dev_churn_prediction_package.churn.churn_pre...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/environment.yml' '@dev_churn_prediction_package.ch...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/procs.py' '@dev_churn_prediction_package.churn.chu...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/streamlit.py' '@dev_churn_prediction_package.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/udf.py' '@dev_churn_prediction_package.churn.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/models/regressor.pkl' '@dev_churn_prediction_packa...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/scripts/setup.sql' '@dev_churn_prediction_package.churn.chur...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION dev_churn_prediction_package_APP FROM APPLICATION PACKAGE dev...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 2
+INFO:snowflake.connector.cursor:query: [ALTER APPLICATION PACKAGE "DEV_CHURN_PREDICTION_PACKAGE" ADD VERSION "v2" USING ...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [ALTER APPLICATION PACKAGE "DEV_CHURN_PREDICTION_PACKAGE" SET DEFAULT RELEASE DIR...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.connection:Snowflake Connector for Python Version: 2.9.0, Python Version: 3.8.3, Platform: Windows-10-10.0.22000-SP0
+INFO:snowflake.connector.connection:This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+INFO:snowflake.connector.connection:Setting use_openssl_only mode to False
+INFO:snowflake.snowpark.session:Snowpark Session information: 
+"version" : 1.3.0,
+"python.version" : 3.8.3,
+"python.connector.version" : 2.9.0,
+"python.connector.session.id" : 1245909883191382,
+"os.name" : Windows
+
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION PACKAGE IF NOT EXISTS IDENTIFIER('"DEV_CHURN_PREDICTION_PACKA...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [USE DATABASE DEV_CHURN_PREDICTION_PACKAGE]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE SCHEMA churn]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE STAGE churn_prediction_stage DIRECTORY = ( ENABLE = true ) COM...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create schema if not exists dev_churn_prediction_package.shared_content_schema]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create or replace view dev_churn_prediction_package.shared_content_schema.TELCO_...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant usage on schema dev_churn_prediction_package.shared_content_schema to shar...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant reference_usage on database CUSTOMER_DB to share in application package de...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant select on view dev_churn_prediction_package.shared_content_schema.TELCO_UN...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [GET '@CUSTOMER_DB.CHURN.MODELS/regressor.pkl' 'file://app/src/libraries/models' ...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/manifest.yml' '@dev_churn_prediction_package.churn.churn_pre...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/environment.yml' '@dev_churn_prediction_package.ch...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/procs.py' '@dev_churn_prediction_package.churn.chu...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/streamlit.py' '@dev_churn_prediction_package.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/udf.py' '@dev_churn_prediction_package.churn.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/models/regressor.pkl' '@dev_churn_prediction_packa...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/scripts/setup.sql' '@dev_churn_prediction_package.churn.chur...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION dev_churn_prediction_package_APP FROM APPLICATION PACKAGE dev...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.connection:Snowflake Connector for Python Version: 2.9.0, Python Version: 3.8.3, Platform: Windows-10-10.0.22000-SP0
+INFO:snowflake.connector.connection:This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+INFO:snowflake.connector.connection:Setting use_openssl_only mode to False
+INFO:snowflake.snowpark.session:Snowpark Session information: 
+"version" : 1.3.0,
+"python.version" : 3.8.3,
+"python.connector.version" : 2.9.0,
+"python.connector.session.id" : 1245909883211806,
+"os.name" : Windows
+
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION PACKAGE IF NOT EXISTS IDENTIFIER('"DEV_CHURN_PREDICTION_PACKA...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [USE DATABASE DEV_CHURN_PREDICTION_PACKAGE]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE SCHEMA churn]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE STAGE churn_prediction_stage DIRECTORY = ( ENABLE = true ) COM...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create schema if not exists dev_churn_prediction_package.shared_content_schema]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create or replace view dev_churn_prediction_package.shared_content_schema.TELCO_...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant usage on schema dev_churn_prediction_package.shared_content_schema to shar...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant reference_usage on database CUSTOMER_DB to share in application package de...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant select on view dev_churn_prediction_package.shared_content_schema.TELCO_UN...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [GET '@CUSTOMER_DB.CHURN.MODELS/regressor.pkl' 'file://app/src/libraries/models' ...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/manifest.yml' '@dev_churn_prediction_package.churn.churn_pre...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/environment.yml' '@dev_churn_prediction_package.ch...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/procs.py' '@dev_churn_prediction_package.churn.chu...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/streamlit.py' '@dev_churn_prediction_package.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/udf.py' '@dev_churn_prediction_package.churn.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/models/regressor.pkl' '@dev_churn_prediction_packa...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/scripts/setup.sql' '@dev_churn_prediction_package.churn.chur...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION dev_churn_prediction_package_APP FROM APPLICATION PACKAGE dev...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 2
+INFO:snowflake.connector.cursor:query: [ALTER APPLICATION PACKAGE "DEV_CHURN_PREDICTION_PACKAGE" ADD VERSION "v2" USING ...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.connection:Snowflake Connector for Python Version: 2.9.0, Python Version: 3.8.3, Platform: Windows-10-10.0.22000-SP0
+INFO:snowflake.connector.connection:This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+INFO:snowflake.connector.connection:Setting use_openssl_only mode to False
+INFO:snowflake.snowpark.session:Snowpark Session information: 
+"version" : 1.3.0,
+"python.version" : 3.8.3,
+"python.connector.version" : 2.9.0,
+"python.connector.session.id" : 1245909883211810,
+"os.name" : Windows
+
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION PACKAGE IF NOT EXISTS IDENTIFIER('"DEV_CHURN_PREDICTION_PACKA...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [USE DATABASE DEV_CHURN_PREDICTION_PACKAGE]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE SCHEMA churn]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE STAGE churn_prediction_stage DIRECTORY = ( ENABLE = true ) COM...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create schema if not exists dev_churn_prediction_package.shared_content_schema]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create or replace view dev_churn_prediction_package.shared_content_schema.TELCO_...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant usage on schema dev_churn_prediction_package.shared_content_schema to shar...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant reference_usage on database CUSTOMER_DB to share in application package de...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant select on view dev_churn_prediction_package.shared_content_schema.TELCO_UN...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [GET '@CUSTOMER_DB.CHURN.MODELS/regressor.pkl' 'file://app/src/libraries/models' ...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/manifest.yml' '@dev_churn_prediction_package.churn.churn_pre...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/environment.yml' '@dev_churn_prediction_package.ch...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/procs.py' '@dev_churn_prediction_package.churn.chu...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/streamlit.py' '@dev_churn_prediction_package.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/udf.py' '@dev_churn_prediction_package.churn.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/models/regressor.pkl' '@dev_churn_prediction_packa...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/scripts/setup.sql' '@dev_churn_prediction_package.churn.chur...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION dev_churn_prediction_package_APP FROM APPLICATION PACKAGE dev...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 2
+INFO:snowflake.connector.cursor:query: [ALTER APPLICATION PACKAGE "DEV_CHURN_PREDICTION_PACKAGE" ADD VERSION "v2" USING ...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.connection:Snowflake Connector for Python Version: 2.9.0, Python Version: 3.8.3, Platform: Windows-10-10.0.22000-SP0
+INFO:snowflake.connector.connection:This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+INFO:snowflake.connector.connection:Setting use_openssl_only mode to False
+INFO:snowflake.snowpark.session:Snowpark Session information: 
+"version" : 1.3.0,
+"python.version" : 3.8.3,
+"python.connector.version" : 2.9.0,
+"python.connector.session.id" : 1245909883183154,
+"os.name" : Windows
+
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION PACKAGE IF NOT EXISTS IDENTIFIER('"DEV_CHURN_PREDICTION_PACKA...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [USE DATABASE DEV_CHURN_PREDICTION_PACKAGE]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE SCHEMA churn]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE STAGE churn_prediction_stage DIRECTORY = ( ENABLE = true ) COM...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create schema if not exists dev_churn_prediction_package.shared_content_schema]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create or replace view dev_churn_prediction_package.shared_content_schema.TELCO_...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant usage on schema dev_churn_prediction_package.shared_content_schema to shar...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant reference_usage on database CUSTOMER_DB to share in application package de...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant select on view dev_churn_prediction_package.shared_content_schema.TELCO_UN...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [GET '@CUSTOMER_DB.CHURN.MODELS/regressor.pkl' 'file://app/src/libraries/models' ...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/manifest.yml' '@dev_churn_prediction_package.churn.churn_pre...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/environment.yml' '@dev_churn_prediction_package.ch...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/procs.py' '@dev_churn_prediction_package.churn.chu...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/streamlit.py' '@dev_churn_prediction_package.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/udf.py' '@dev_churn_prediction_package.churn.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/models/regressor.pkl' '@dev_churn_prediction_packa...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/scripts/setup.sql' '@dev_churn_prediction_package.churn.chur...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION dev_churn_prediction_package_APP FROM APPLICATION PACKAGE dev...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 2
+INFO:snowflake.connector.cursor:query: [ALTER APPLICATION PACKAGE "DEV_CHURN_PREDICTION_PACKAGE" ADD VERSION "v2" USING ...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.connection:Snowflake Connector for Python Version: 2.9.0, Python Version: 3.8.3, Platform: Windows-10-10.0.22000-SP0
+INFO:snowflake.connector.connection:This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+INFO:snowflake.connector.connection:Setting use_openssl_only mode to False
+INFO:snowflake.snowpark.session:Snowpark Session information: 
+"version" : 1.3.0,
+"python.version" : 3.8.3,
+"python.connector.version" : 2.9.0,
+"python.connector.session.id" : 1245909883187306,
+"os.name" : Windows
+
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION PACKAGE IF NOT EXISTS IDENTIFIER('"DEV_CHURN_PREDICTION_PACKA...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [USE DATABASE DEV_CHURN_PREDICTION_PACKAGE]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE SCHEMA churn]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE STAGE churn_prediction_stage DIRECTORY = ( ENABLE = true ) COM...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create schema if not exists dev_churn_prediction_package.shared_content_schema]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create or replace view dev_churn_prediction_package.shared_content_schema.TELCO_...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant usage on schema dev_churn_prediction_package.shared_content_schema to shar...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant reference_usage on database CUSTOMER_DB to share in application package de...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant select on view dev_churn_prediction_package.shared_content_schema.TELCO_UN...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [GET '@CUSTOMER_DB.CHURN.MODELS/regressor.pkl' 'file://app/src/libraries/models' ...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/manifest.yml' '@dev_churn_prediction_package.churn.churn_pre...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/environment.yml' '@dev_churn_prediction_package.ch...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/procs.py' '@dev_churn_prediction_package.churn.chu...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/streamlit.py' '@dev_churn_prediction_package.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/udf.py' '@dev_churn_prediction_package.churn.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/models/regressor.pkl' '@dev_churn_prediction_packa...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/scripts/setup.sql' '@dev_churn_prediction_package.churn.chur...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION dev_churn_prediction_package_APP FROM APPLICATION PACKAGE dev...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 2
+INFO:snowflake.connector.cursor:query: [ALTER APPLICATION PACKAGE "DEV_CHURN_PREDICTION_PACKAGE" ADD VERSION "v3" USING ...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [ALTER APPLICATION PACKAGE "DEV_CHURN_PREDICTION_PACKAGE" SET DEFAULT RELEASE DIR...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.connection:Snowflake Connector for Python Version: 2.9.0, Python Version: 3.8.3, Platform: Windows-10-10.0.22000-SP0
+INFO:snowflake.connector.connection:This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+INFO:snowflake.connector.connection:Setting use_openssl_only mode to False
+INFO:snowflake.snowpark.session:Snowpark Session information: 
+"version" : 1.3.0,
+"python.version" : 3.8.3,
+"python.connector.version" : 2.9.0,
+"python.connector.session.id" : 1245909883187310,
+"os.name" : Windows
+
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION PACKAGE IF NOT EXISTS IDENTIFIER('"DEV_CHURN_PREDICTION_PACKA...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [USE DATABASE DEV_CHURN_PREDICTION_PACKAGE]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE SCHEMA churn]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE STAGE churn_prediction_stage DIRECTORY = ( ENABLE = true ) COM...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create schema if not exists dev_churn_prediction_package.shared_content_schema]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create or replace view dev_churn_prediction_package.shared_content_schema.TELCO_...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant usage on schema dev_churn_prediction_package.shared_content_schema to shar...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant reference_usage on database CUSTOMER_DB to share in application package de...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant select on view dev_churn_prediction_package.shared_content_schema.TELCO_UN...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [GET '@CUSTOMER_DB.CHURN.MODELS/regressor.pkl' 'file://app/src/libraries/models' ...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/manifest.yml' '@dev_churn_prediction_package.churn.churn_pre...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/environment.yml' '@dev_churn_prediction_package.ch...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/procs.py' '@dev_churn_prediction_package.churn.chu...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/streamlit.py' '@dev_churn_prediction_package.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/udf.py' '@dev_churn_prediction_package.churn.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/models/regressor.pkl' '@dev_churn_prediction_packa...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/scripts/setup.sql' '@dev_churn_prediction_package.churn.chur...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION dev_churn_prediction_package_APP FROM APPLICATION PACKAGE dev...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 2
+INFO:snowflake.connector.cursor:query: [ALTER APPLICATION PACKAGE "DEV_CHURN_PREDICTION_PACKAGE" ADD VERSION "v3" USING ...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.connection:Snowflake Connector for Python Version: 2.9.0, Python Version: 3.8.3, Platform: Windows-10-10.0.22000-SP0
+INFO:snowflake.connector.connection:This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+INFO:snowflake.connector.connection:Setting use_openssl_only mode to False
+INFO:snowflake.snowpark.session:Snowpark Session information: 
+"version" : 1.3.0,
+"python.version" : 3.8.3,
+"python.connector.version" : 2.9.0,
+"python.connector.session.id" : 1245909883187314,
+"os.name" : Windows
+
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION PACKAGE IF NOT EXISTS IDENTIFIER('"DEV_CHURN_PREDICTION_PACKA...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [USE DATABASE DEV_CHURN_PREDICTION_PACKAGE]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE SCHEMA churn]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE STAGE churn_prediction_stage DIRECTORY = ( ENABLE = true ) COM...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create schema if not exists dev_churn_prediction_package.shared_content_schema]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create or replace view dev_churn_prediction_package.shared_content_schema.TELCO_...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant usage on schema dev_churn_prediction_package.shared_content_schema to shar...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant reference_usage on database CUSTOMER_DB to share in application package de...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant select on view dev_churn_prediction_package.shared_content_schema.TELCO_UN...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [GET '@CUSTOMER_DB.CHURN.MODELS/regressor.pkl' 'file://app/src/libraries/models' ...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/manifest.yml' '@dev_churn_prediction_package.churn.churn_pre...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/environment.yml' '@dev_churn_prediction_package.ch...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/procs.py' '@dev_churn_prediction_package.churn.chu...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/streamlit.py' '@dev_churn_prediction_package.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/udf.py' '@dev_churn_prediction_package.churn.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/models/regressor.pkl' '@dev_churn_prediction_packa...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/scripts/setup.sql' '@dev_churn_prediction_package.churn.chur...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION dev_churn_prediction_package_APP FROM APPLICATION PACKAGE dev...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.connection:Snowflake Connector for Python Version: 2.9.0, Python Version: 3.8.3, Platform: Windows-10-10.0.22000-SP0
+INFO:snowflake.connector.connection:This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+INFO:snowflake.connector.connection:Setting use_openssl_only mode to False
+INFO:snowflake.snowpark.session:Snowpark Session information: 
+"version" : 1.3.0,
+"python.version" : 3.8.3,
+"python.connector.version" : 2.9.0,
+"python.connector.session.id" : 1245909883191390,
+"os.name" : Windows
+
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION PACKAGE IF NOT EXISTS IDENTIFIER('"DEV_CHURN_PREDICTION_PACKA...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [USE DATABASE DEV_CHURN_PREDICTION_PACKAGE]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE SCHEMA churn]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE STAGE churn_prediction_stage DIRECTORY = ( ENABLE = true ) COM...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create schema if not exists dev_churn_prediction_package.shared_content_schema]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create or replace view dev_churn_prediction_package.shared_content_schema.TELCO_...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant usage on schema dev_churn_prediction_package.shared_content_schema to shar...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant reference_usage on database CUSTOMER_DB to share in application package de...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant select on view dev_churn_prediction_package.shared_content_schema.TELCO_UN...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [GET '@CUSTOMER_DB.CHURN.MODELS/regressor.pkl' 'file://app/src/libraries/models' ...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/manifest.yml' '@dev_churn_prediction_package.churn.churn_pre...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/environment.yml' '@dev_churn_prediction_package.ch...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/procs.py' '@dev_churn_prediction_package.churn.chu...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/streamlit.py' '@dev_churn_prediction_package.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/udf.py' '@dev_churn_prediction_package.churn.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/models/regressor.pkl' '@dev_churn_prediction_packa...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/scripts/setup.sql' '@dev_churn_prediction_package.churn.chur...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION dev_churn_prediction_package_APP FROM APPLICATION PACKAGE dev...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 2
+INFO:snowflake.connector.cursor:query: [ALTER APPLICATION PACKAGE "DEV_CHURN_PREDICTION_PACKAGE" ADD VERSION "v4" USING ...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [ALTER APPLICATION PACKAGE "DEV_CHURN_PREDICTION_PACKAGE" SET DEFAULT RELEASE DIR...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.connection:Snowflake Connector for Python Version: 2.9.0, Python Version: 3.8.3, Platform: Windows-10-10.0.22000-SP0
+INFO:snowflake.connector.connection:This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+INFO:snowflake.connector.connection:Setting use_openssl_only mode to False
+INFO:snowflake.snowpark.session:Snowpark Session information: 
+"version" : 1.3.0,
+"python.version" : 3.8.3,
+"python.connector.version" : 2.9.0,
+"python.connector.session.id" : 1245909883191410,
+"os.name" : Windows
+
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION PACKAGE IF NOT EXISTS IDENTIFIER('"DEV_CHURN_PREDICTION_PACKA...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [USE DATABASE DEV_CHURN_PREDICTION_PACKAGE]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE SCHEMA churn]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE STAGE churn_prediction_stage DIRECTORY = ( ENABLE = true ) COM...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create schema if not exists dev_churn_prediction_package.shared_content_schema]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create or replace view dev_churn_prediction_package.shared_content_schema.TELCO_...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant usage on schema dev_churn_prediction_package.shared_content_schema to shar...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant reference_usage on database CUSTOMER_DB to share in application package de...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant select on view dev_churn_prediction_package.shared_content_schema.TELCO_UN...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [GET '@CUSTOMER_DB.CHURN.MODELS/regressor.pkl' 'file://app/src/libraries/models' ...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/manifest.yml' '@dev_churn_prediction_package.churn.churn_pre...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/environment.yml' '@dev_churn_prediction_package.ch...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/procs.py' '@dev_churn_prediction_package.churn.chu...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/streamlit.py' '@dev_churn_prediction_package.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/udf.py' '@dev_churn_prediction_package.churn.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/models/regressor.pkl' '@dev_churn_prediction_packa...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/scripts/setup.sql' '@dev_churn_prediction_package.churn.chur...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION dev_churn_prediction_package_APP FROM APPLICATION PACKAGE dev...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 2
+INFO:snowflake.connector.cursor:query: [ALTER APPLICATION PACKAGE "DEV_CHURN_PREDICTION_PACKAGE" ADD VERSION "v1" USING ...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [ALTER APPLICATION PACKAGE "DEV_CHURN_PREDICTION_PACKAGE" SET DEFAULT RELEASE DIR...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.connection:Snowflake Connector for Python Version: 2.9.0, Python Version: 3.8.3, Platform: Windows-10-10.0.22000-SP0
+INFO:snowflake.connector.connection:This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+INFO:snowflake.connector.connection:Setting use_openssl_only mode to False
+INFO:snowflake.snowpark.session:Snowpark Session information: 
+"version" : 1.3.0,
+"python.version" : 3.8.3,
+"python.connector.version" : 2.9.0,
+"python.connector.session.id" : 1245909883191418,
+"os.name" : Windows
+
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION PACKAGE IF NOT EXISTS IDENTIFIER('"DEV_CHURN_PREDICTION_PACKA...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [USE DATABASE DEV_CHURN_PREDICTION_PACKAGE]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE SCHEMA churn]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE STAGE churn_prediction_stage DIRECTORY = ( ENABLE = true ) COM...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create schema if not exists dev_churn_prediction_package.shared_content_schema]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create or replace view dev_churn_prediction_package.shared_content_schema.TELCO_...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant usage on schema dev_churn_prediction_package.shared_content_schema to shar...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant reference_usage on database CUSTOMER_DB to share in application package de...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant select on view dev_churn_prediction_package.shared_content_schema.TELCO_UN...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [GET '@CUSTOMER_DB.CHURN.MODELS/regressor.pkl' 'file://app/src/libraries/models' ...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/manifest.yml' '@dev_churn_prediction_package.churn.churn_pre...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/environment.yml' '@dev_churn_prediction_package.ch...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/procs.py' '@dev_churn_prediction_package.churn.chu...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/streamlit.py' '@dev_churn_prediction_package.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/udf.py' '@dev_churn_prediction_package.churn.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/models/regressor.pkl' '@dev_churn_prediction_packa...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/scripts/setup.sql' '@dev_churn_prediction_package.churn.chur...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION dev_churn_prediction_package_APP FROM APPLICATION PACKAGE dev...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.connection:Snowflake Connector for Python Version: 2.9.0, Python Version: 3.8.3, Platform: Windows-10-10.0.22000-SP0
+INFO:snowflake.connector.connection:This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+INFO:snowflake.connector.connection:Setting use_openssl_only mode to False
+INFO:snowflake.snowpark.session:Snowpark Session information: 
+"version" : 1.3.0,
+"python.version" : 3.8.3,
+"python.connector.version" : 2.9.0,
+"python.connector.session.id" : 1245909883211858,
+"os.name" : Windows
+
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION PACKAGE IF NOT EXISTS IDENTIFIER('"DEV_CHURN_PREDICTION_PACKA...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [USE DATABASE DEV_CHURN_PREDICTION_PACKAGE]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE SCHEMA churn]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE STAGE churn_prediction_stage DIRECTORY = ( ENABLE = true ) COM...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create schema if not exists dev_churn_prediction_package.shared_content_schema]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create or replace view dev_churn_prediction_package.shared_content_schema.TELCO_...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant usage on schema dev_churn_prediction_package.shared_content_schema to shar...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant reference_usage on database CUSTOMER_DB to share in application package de...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant select on view dev_churn_prediction_package.shared_content_schema.TELCO_UN...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [GET '@CUSTOMER_DB.CHURN.MODELS/regressor.pkl' 'file://app/src/libraries/models' ...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/manifest.yml' '@dev_churn_prediction_package.churn.churn_pre...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/environment.yml' '@dev_churn_prediction_package.ch...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/procs.py' '@dev_churn_prediction_package.churn.chu...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/streamlit.py' '@dev_churn_prediction_package.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/udf.py' '@dev_churn_prediction_package.churn.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/models/regressor.pkl' '@dev_churn_prediction_packa...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/scripts/setup.sql' '@dev_churn_prediction_package.churn.chur...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION dev_churn_prediction_package_APP FROM APPLICATION PACKAGE dev...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.connection:Snowflake Connector for Python Version: 2.9.0, Python Version: 3.8.3, Platform: Windows-10-10.0.22000-SP0
+INFO:snowflake.connector.connection:This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+INFO:snowflake.connector.connection:Setting use_openssl_only mode to False
+INFO:snowflake.snowpark.session:Snowpark Session information: 
+"version" : 1.3.0,
+"python.version" : 3.8.3,
+"python.connector.version" : 2.9.0,
+"python.connector.session.id" : 1245909883211862,
+"os.name" : Windows
+
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION PACKAGE IF NOT EXISTS IDENTIFIER('"DEV_CHURN_PREDICTION_PACKA...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [USE DATABASE DEV_CHURN_PREDICTION_PACKAGE]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE SCHEMA churn]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE STAGE churn_prediction_stage DIRECTORY = ( ENABLE = true ) COM...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create schema if not exists dev_churn_prediction_package.shared_content_schema]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create or replace view dev_churn_prediction_package.shared_content_schema.TELCO_...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant usage on schema dev_churn_prediction_package.shared_content_schema to shar...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant reference_usage on database CUSTOMER_DB to share in application package de...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant select on view dev_churn_prediction_package.shared_content_schema.TELCO_UN...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [GET '@CUSTOMER_DB.CHURN.MODELS/regressor.pkl' 'file://app/src/libraries/models' ...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/manifest.yml' '@dev_churn_prediction_package.churn.churn_pre...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/environment.yml' '@dev_churn_prediction_package.ch...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/procs.py' '@dev_churn_prediction_package.churn.chu...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/streamlit.py' '@dev_churn_prediction_package.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/udf.py' '@dev_churn_prediction_package.churn.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/models/regressor.pkl' '@dev_churn_prediction_packa...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/scripts/setup.sql' '@dev_churn_prediction_package.churn.chur...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION dev_churn_prediction_package_APP FROM APPLICATION PACKAGE dev...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 2
+INFO:snowflake.connector.cursor:query: [ALTER APPLICATION PACKAGE "DEV_CHURN_PREDICTION_PACKAGE" ADD VERSION "v1" USING ...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [ALTER APPLICATION PACKAGE "DEV_CHURN_PREDICTION_PACKAGE" SET DEFAULT RELEASE DIR...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.connection:Snowflake Connector for Python Version: 2.9.0, Python Version: 3.8.3, Platform: Windows-10-10.0.22000-SP0
+INFO:snowflake.connector.connection:This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+INFO:snowflake.connector.connection:Setting use_openssl_only mode to False
+INFO:snowflake.snowpark.session:Snowpark Session information: 
+"version" : 1.3.0,
+"python.version" : 3.8.3,
+"python.connector.version" : 2.9.0,
+"python.connector.session.id" : 1245909883191426,
+"os.name" : Windows
+
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION PACKAGE IF NOT EXISTS IDENTIFIER('"DEV_CHURN_PREDICTION_PACKA...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [USE DATABASE DEV_CHURN_PREDICTION_PACKAGE]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE SCHEMA churn]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE STAGE churn_prediction_stage DIRECTORY = ( ENABLE = true ) COM...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create schema if not exists dev_churn_prediction_package.shared_content_schema]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create or replace view dev_churn_prediction_package.shared_content_schema.TELCO_...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant usage on schema dev_churn_prediction_package.shared_content_schema to shar...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant reference_usage on database CUSTOMER_DB to share in application package de...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant select on view dev_churn_prediction_package.shared_content_schema.TELCO_UN...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [GET '@CUSTOMER_DB.CHURN.MODELS/regressor.pkl' 'file://app/src/libraries/models' ...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/manifest.yml' '@dev_churn_prediction_package.churn.churn_pre...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/environment.yml' '@dev_churn_prediction_package.ch...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/procs.py' '@dev_churn_prediction_package.churn.chu...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/streamlit.py' '@dev_churn_prediction_package.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/udf.py' '@dev_churn_prediction_package.churn.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/models/regressor.pkl' '@dev_churn_prediction_packa...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/scripts/setup.sql' '@dev_churn_prediction_package.churn.chur...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION dev_churn_prediction_package_APP FROM APPLICATION PACKAGE dev...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 2
+INFO:snowflake.connector.cursor:query: [ALTER APPLICATION PACKAGE "DEV_CHURN_PREDICTION_PACKAGE" ADD VERSION "v1" USING ...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [ALTER APPLICATION PACKAGE "DEV_CHURN_PREDICTION_PACKAGE" SET DEFAULT RELEASE DIR...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.connection:Snowflake Connector for Python Version: 2.9.0, Python Version: 3.8.3, Platform: Windows-10-10.0.22000-SP0
+INFO:snowflake.connector.connection:This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+INFO:snowflake.connector.connection:Setting use_openssl_only mode to False
+INFO:snowflake.snowpark.session:Snowpark Session information: 
+"version" : 1.3.0,
+"python.version" : 3.8.3,
+"python.connector.version" : 2.9.0,
+"python.connector.session.id" : 1245909883183178,
+"os.name" : Windows
+
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION PACKAGE IF NOT EXISTS IDENTIFIER('"DEV_CHURN_PREDICTION_PACKA...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [USE DATABASE DEV_CHURN_PREDICTION_PACKAGE]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE SCHEMA churn]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE STAGE churn_prediction_stage DIRECTORY = ( ENABLE = true ) COM...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create schema if not exists dev_churn_prediction_package.shared_content_schema]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create or replace view dev_churn_prediction_package.shared_content_schema.TELCO_...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant usage on schema dev_churn_prediction_package.shared_content_schema to shar...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant reference_usage on database CUSTOMER_DB to share in application package de...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant select on view dev_churn_prediction_package.shared_content_schema.TELCO_UN...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [GET '@CUSTOMER_DB.CHURN.MODELS/regressor.pkl' 'file://app/src/libraries/models' ...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/manifest.yml' '@dev_churn_prediction_package.churn.churn_pre...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/environment.yml' '@dev_churn_prediction_package.ch...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/procs.py' '@dev_churn_prediction_package.churn.chu...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/streamlit.py' '@dev_churn_prediction_package.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/udf.py' '@dev_churn_prediction_package.churn.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/models/regressor.pkl' '@dev_churn_prediction_packa...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/scripts/setup.sql' '@dev_churn_prediction_package.churn.chur...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION dev_churn_prediction_package_APP FROM APPLICATION PACKAGE dev...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 2
+INFO:snowflake.connector.cursor:query: [ALTER APPLICATION PACKAGE "DEV_CHURN_PREDICTION_PACKAGE" ADD VERSION "v1" USING ...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [ALTER APPLICATION PACKAGE "DEV_CHURN_PREDICTION_PACKAGE" SET DEFAULT RELEASE DIR...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.connection:Snowflake Connector for Python Version: 2.9.0, Python Version: 3.8.3, Platform: Windows-10-10.0.22000-SP0
+INFO:snowflake.connector.connection:This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+INFO:snowflake.connector.connection:Setting use_openssl_only mode to False
+INFO:snowflake.snowpark.session:Snowpark Session information: 
+"version" : 1.3.0,
+"python.version" : 3.8.3,
+"python.connector.version" : 2.9.0,
+"python.connector.session.id" : 1245909883215878,
+"os.name" : Windows
+
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION PACKAGE IF NOT EXISTS IDENTIFIER('"DEV_CHURN_PREDICTION_PACKA...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [USE DATABASE DEV_CHURN_PREDICTION_PACKAGE]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE SCHEMA churn]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE STAGE churn_prediction_stage DIRECTORY = ( ENABLE = true ) COM...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create schema if not exists dev_churn_prediction_package.shared_content_schema]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create or replace view dev_churn_prediction_package.shared_content_schema.TELCO_...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant usage on schema dev_churn_prediction_package.shared_content_schema to shar...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant reference_usage on database CUSTOMER_DB to share in application package de...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant select on view dev_churn_prediction_package.shared_content_schema.TELCO_UN...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [GET '@CUSTOMER_DB.CHURN.MODELS/regressor.pkl' 'file://app/src/libraries/models' ...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/manifest.yml' '@dev_churn_prediction_package.churn.churn_pre...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/environment.yml' '@dev_churn_prediction_package.ch...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/procs.py' '@dev_churn_prediction_package.churn.chu...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/streamlit.py' '@dev_churn_prediction_package.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/udf.py' '@dev_churn_prediction_package.churn.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/models/regressor.pkl' '@dev_churn_prediction_packa...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/scripts/setup.sql' '@dev_churn_prediction_package.churn.chur...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION dev_churn_prediction_package_APP FROM APPLICATION PACKAGE dev...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.connection:Snowflake Connector for Python Version: 2.9.0, Python Version: 3.8.3, Platform: Windows-10-10.0.22000-SP0
+INFO:snowflake.connector.connection:This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+INFO:snowflake.connector.connection:Setting use_openssl_only mode to False
+INFO:snowflake.snowpark.session:Snowpark Session information: 
+"version" : 1.3.0,
+"python.version" : 3.8.3,
+"python.connector.version" : 2.9.0,
+"python.connector.session.id" : 1245909883219974,
+"os.name" : Windows
+
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION PACKAGE IF NOT EXISTS IDENTIFIER('"DEV_CHURN_PREDICTION_PACKA...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [USE DATABASE DEV_CHURN_PREDICTION_PACKAGE]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE SCHEMA churn]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE STAGE churn_prediction_stage DIRECTORY = ( ENABLE = true ) COM...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create schema if not exists dev_churn_prediction_package.shared_content_schema]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create or replace view dev_churn_prediction_package.shared_content_schema.TELCO_...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant usage on schema dev_churn_prediction_package.shared_content_schema to shar...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant reference_usage on database CUSTOMER_DB to share in application package de...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant select on view dev_churn_prediction_package.shared_content_schema.TELCO_UN...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [GET '@CUSTOMER_DB.CHURN.MODELS/regressor.pkl' 'file://app/src/libraries/models' ...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/manifest.yml' '@dev_churn_prediction_package.churn.churn_pre...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/environment.yml' '@dev_churn_prediction_package.ch...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/procs.py' '@dev_churn_prediction_package.churn.chu...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/streamlit.py' '@dev_churn_prediction_package.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/udf.py' '@dev_churn_prediction_package.churn.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/models/regressor.pkl' '@dev_churn_prediction_packa...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/scripts/setup.sql' '@dev_churn_prediction_package.churn.chur...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION dev_churn_prediction_package_APP FROM APPLICATION PACKAGE dev...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.connection:Snowflake Connector for Python Version: 2.9.0, Python Version: 3.8.3, Platform: Windows-10-10.0.22000-SP0
+INFO:snowflake.connector.connection:This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+INFO:snowflake.connector.connection:Setting use_openssl_only mode to False
+INFO:snowflake.snowpark.session:Snowpark Session information: 
+"version" : 1.3.0,
+"python.version" : 3.8.3,
+"python.connector.version" : 2.9.0,
+"python.connector.session.id" : 1245909883224070,
+"os.name" : Windows
+
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION PACKAGE IF NOT EXISTS IDENTIFIER('"DEV_CHURN_PREDICTION_PACKA...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [USE DATABASE DEV_CHURN_PREDICTION_PACKAGE]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE SCHEMA churn]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE STAGE churn_prediction_stage DIRECTORY = ( ENABLE = true ) COM...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create schema if not exists dev_churn_prediction_package.shared_content_schema]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create or replace view dev_churn_prediction_package.shared_content_schema.TELCO_...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant usage on schema dev_churn_prediction_package.shared_content_schema to shar...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant reference_usage on database CUSTOMER_DB to share in application package de...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant select on view dev_churn_prediction_package.shared_content_schema.TELCO_UN...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [GET '@CUSTOMER_DB.CHURN.MODELS/regressor.pkl' 'file://app/src/libraries/models' ...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/manifest.yml' '@dev_churn_prediction_package.churn.churn_pre...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/environment.yml' '@dev_churn_prediction_package.ch...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/procs.py' '@dev_churn_prediction_package.churn.chu...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/streamlit.py' '@dev_churn_prediction_package.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/udf.py' '@dev_churn_prediction_package.churn.churn...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/models/regressor.pkl' '@dev_churn_prediction_packa...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/scripts/setup.sql' '@dev_churn_prediction_package.churn.chur...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION dev_churn_prediction_package_APP FROM APPLICATION PACKAGE dev...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 2
+INFO:snowflake.connector.cursor:query: [ALTER APPLICATION PACKAGE "DEV_CHURN_PREDICTION_PACKAGE" ADD VERSION "v1" USING ...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [ALTER APPLICATION PACKAGE "DEV_CHURN_PREDICTION_PACKAGE" SET DEFAULT RELEASE DIR...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1

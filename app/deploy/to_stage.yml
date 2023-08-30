@@ -1,0 +1,14 @@
+
+# core app parameters
+version_folder: v1
+app: churn_prediction_package
+app_dev: dev_churn_prediction_package
+schema: churn
+stage: churn_prediction_stage
+local_root: app/src
+
+
+# For sharing data (from consumer to app)
+data_sharing_schema: shared_content_schema
+shared_data:
+  - CUSTOMER_DB.CHURN.TELCO_UNLABELED

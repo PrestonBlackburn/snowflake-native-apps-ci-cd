@@ -1,0 +1,4 @@
+*.config
+**/*.ipynb_checkpoints
+*.log
+

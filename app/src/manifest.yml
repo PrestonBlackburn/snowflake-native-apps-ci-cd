@@ -1,0 +1,32 @@
+manifest_version: 1
+
+version:
+  name: V1
+  label: version 1
+  comment: first version of app
+
+artifacts:
+  setup_script: scripts/setup.sql
+  default_streamlit: app_instance_schema.streamlit
+  extension_code: true
+
+
+#runtime configuration for this version
+configuration:
+  log_level: debug
+  trace_level: off
+
+references:
+  - churn_table:
+      label: "Churn Data Table"
+      description: "prepared churn data for model"
+      privileges: 
+        - SELECT
+      object_type: Table
+      multi_valued: false
+      register_callback: app_instance_schema.update_reference
+
+  # - ROLE PUBLIC:
+  #   description: "grant role with account usage privileges"
+  # - MONITOR USAGE ON ACCOUNT:
+  #   description: "to view warehouse usage"

@@ -5,13 +5,13 @@ INFO:snowflake.snowpark.session:Snowpark Session information:
 "version" : 1.3.0,
 "python.version" : 3.8.3,
 "python.connector.version" : 2.9.0,
-"python.connector.session.id" : 1245909883265042,
+"python.connector.session.id" : 1245909883260958,
 "os.name" : Windows
 
-INFO:snowflake.connector.cursor:query: [CREATE APPLICATION PACKAGE IF NOT EXISTS IDENTIFIER('"DEV_CHURN_PREDICTION_PACKA...]
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION PACKAGE IF NOT EXISTS IDENTIFIER('"CHURN_PREDICTION_PACKAGE"'...]
 INFO:snowflake.connector.cursor:query execution done
 INFO:snowflake.connector.cursor:Number of results in first chunk: 1
-INFO:snowflake.connector.cursor:query: [USE DATABASE DEV_CHURN_PREDICTION_PACKAGE]
+INFO:snowflake.connector.cursor:query: [USE DATABASE CHURN_PREDICTION_PACKAGE]
 INFO:snowflake.connector.cursor:query execution done
 INFO:snowflake.connector.cursor:Number of results in first chunk: 1
 INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE SCHEMA churn]
@@ -20,43 +20,125 @@ INFO:snowflake.connector.cursor:Number of results in first chunk: 1
 INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE STAGE churn_prediction_stage DIRECTORY = ( ENABLE = true ) COM...]
 INFO:snowflake.connector.cursor:query execution done
 INFO:snowflake.connector.cursor:Number of results in first chunk: 1
-INFO:snowflake.connector.cursor:query: [create schema if not exists dev_churn_prediction_package.shared_content_schema]
+INFO:snowflake.connector.cursor:query: [create schema if not exists churn_prediction_package.shared_content_schema]
 INFO:snowflake.connector.cursor:query execution done
 INFO:snowflake.connector.cursor:Number of results in first chunk: 1
-INFO:snowflake.connector.cursor:query: [create or replace view dev_churn_prediction_package.shared_content_schema.TELCO_...]
+INFO:snowflake.connector.cursor:query: [create or replace view churn_prediction_package.shared_content_schema.TELCO_UNLA...]
 INFO:snowflake.connector.cursor:query execution done
 INFO:snowflake.connector.cursor:Number of results in first chunk: 1
-INFO:snowflake.connector.cursor:query: [grant usage on schema dev_churn_prediction_package.shared_content_schema to shar...]
+INFO:snowflake.connector.cursor:query: [grant usage on schema churn_prediction_package.shared_content_schema to share in...]
 INFO:snowflake.connector.cursor:query execution done
 INFO:snowflake.connector.cursor:Number of results in first chunk: 1
-INFO:snowflake.connector.cursor:query: [grant reference_usage on database CUSTOMER_DB to share in application package de...]
+INFO:snowflake.connector.cursor:query: [grant reference_usage on database CUSTOMER_DB to share in application package ch...]
 INFO:snowflake.connector.cursor:query execution done
 INFO:snowflake.connector.cursor:Number of results in first chunk: 1
-INFO:snowflake.connector.cursor:query: [grant select on view dev_churn_prediction_package.shared_content_schema.TELCO_UN...]
+INFO:snowflake.connector.cursor:query: [grant select on view churn_prediction_package.shared_content_schema.TELCO_UNLABE...]
 INFO:snowflake.connector.cursor:query execution done
 INFO:snowflake.connector.cursor:Number of results in first chunk: 1
 INFO:snowflake.connector.cursor:query: [GET '@CUSTOMER_DB.CHURN.MODELS/regressor.pkl' 'file://app/src/libraries/models' ...]
 INFO:snowflake.connector.cursor:query execution done
-INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/manifest.yml' '@dev_churn_prediction_package.churn.churn_pre...]
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/manifest.yml' '@churn_prediction_package.churn.churn_predict...]
 INFO:snowflake.connector.cursor:query execution done
-INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/environment.yml' '@dev_churn_prediction_package.ch...]
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/environment.yml' '@churn_prediction_package.churn....]
 INFO:snowflake.connector.cursor:query execution done
-INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/procs.py' '@dev_churn_prediction_package.churn.chu...]
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/procs.py' '@churn_prediction_package.churn.churn_p...]
 INFO:snowflake.connector.cursor:query execution done
-INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/streamlit.py' '@dev_churn_prediction_package.churn...]
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/streamlit.py' '@churn_prediction_package.churn.chu...]
 INFO:snowflake.connector.cursor:query execution done
-INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/udf.py' '@dev_churn_prediction_package.churn.churn...]
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/udf.py' '@churn_prediction_package.churn.churn_pre...]
 INFO:snowflake.connector.cursor:query execution done
-INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/models/regressor.pkl' '@dev_churn_prediction_packa...]
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/models/regressor.pkl' '@churn_prediction_package.c...]
 INFO:snowflake.connector.cursor:query execution done
-INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/scripts/setup.sql' '@dev_churn_prediction_package.churn.chur...]
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/scripts/setup.sql' '@churn_prediction_package.churn.churn_pr...]
 INFO:snowflake.connector.cursor:query execution done
-INFO:snowflake.connector.cursor:query: [CREATE APPLICATION dev_churn_prediction_package_APP FROM APPLICATION PACKAGE dev...]
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION churn_prediction_package_APP FROM APPLICATION PACKAGE churn_p...]
 INFO:snowflake.connector.cursor:query execution done
 INFO:snowflake.connector.cursor:Number of results in first chunk: 2
-INFO:snowflake.connector.cursor:query: [ALTER APPLICATION PACKAGE "DEV_CHURN_PREDICTION_PACKAGE" ADD VERSION "v1" USING ...]
+INFO:snowflake.connector.cursor:query: [ALTER APPLICATION PACKAGE "CHURN_PREDICTION_PACKAGE" ADD VERSION "v1" USING '@ch...]
 INFO:snowflake.connector.cursor:query execution done
 INFO:snowflake.connector.cursor:Number of results in first chunk: 1
-INFO:snowflake.connector.cursor:query: [ALTER APPLICATION PACKAGE "DEV_CHURN_PREDICTION_PACKAGE" SET DEFAULT RELEASE DIR...]
+INFO:snowflake.connector.cursor:query: [ALTER APPLICATION PACKAGE "CHURN_PREDICTION_PACKAGE" SET DEFAULT RELEASE DIRECTI...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.connection:Snowflake Connector for Python Version: 2.9.0, Python Version: 3.8.3, Platform: Windows-10-10.0.22000-SP0
+INFO:snowflake.connector.connection:This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+INFO:snowflake.connector.connection:Setting use_openssl_only mode to False
+INFO:snowflake.snowpark.session:Snowpark Session information: 
+"version" : 1.3.0,
+"python.version" : 3.8.3,
+"python.connector.version" : 2.9.0,
+"python.connector.session.id" : 1245909883236398,
+"os.name" : Windows
+
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION PACKAGE IF NOT EXISTS IDENTIFIER('"CHURN_PREDICTION_PACKAGE"'...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [USE DATABASE CHURN_PREDICTION_PACKAGE]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE SCHEMA churn]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [CREATE OR REPLACE STAGE churn_prediction_stage DIRECTORY = ( ENABLE = true ) COM...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create schema if not exists churn_prediction_package.shared_content_schema]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [create or replace view churn_prediction_package.shared_content_schema.TELCO_UNLA...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant usage on schema churn_prediction_package.shared_content_schema to share in...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant reference_usage on database CUSTOMER_DB to share in application package ch...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [grant select on view churn_prediction_package.shared_content_schema.TELCO_UNLABE...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [GET '@CUSTOMER_DB.CHURN.MODELS/regressor.pkl' 'file://app/src/libraries/models' ...]
+INFO:snowflake.connector.cursor:query execution done
+ERROR:snowflake.connector.file_transfer_agent:An exception was raised in <bound method SnowflakeStorageClient.finish_download of <snowflake.connector.s3_storage_client.SnowflakeS3RestClient object at 0x000001E342F6C550>>
+Traceback (most recent call last):
+  File "C:\Users\Preston\anaconda3\lib\shutil.py", line 788, in move
+    os.rename(src, real_dst)
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'C:\\Users\\Preston\\AppData\\Local\\Temp\\tmpg2tgfy90\\regressor.pkl.part#bmnceipjdm' -> 'app/src/libraries/models\\regressor.pkl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Preston\AppData\Roaming\Python\Python38\site-packages\snowflake\connector\file_transfer_agent.py", line 571, in function_and_callback_wrapper
+    work(*args, **kwargs),
+  File "C:\Users\Preston\AppData\Roaming\Python\Python38\site-packages\snowflake\connector\storage_client.py", line 371, in finish_download
+    shutil.move(tmp_dst_file_name, self.full_dst_file_name)
+  File "C:\Users\Preston\anaconda3\lib\shutil.py", line 802, in move
+    copy_function(src, real_dst)
+  File "C:\Users\Preston\anaconda3\lib\shutil.py", line 432, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "C:\Users\Preston\anaconda3\lib\shutil.py", line 261, in copyfile
+    with open(src, 'rb') as fsrc, open(dst, 'wb') as fdst:
+OSError: [Errno 22] Invalid argument: 'app/src/libraries/models\\regressor.pkl'
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/manifest.yml' '@churn_prediction_package.churn.churn_predict...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/environment.yml' '@churn_prediction_package.churn....]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/procs.py' '@churn_prediction_package.churn.churn_p...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/streamlit.py' '@churn_prediction_package.churn.chu...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/udf.py' '@churn_prediction_package.churn.churn_pre...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/libraries/models/regressor.pkl' '@churn_prediction_package.c...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [PUT 'file://app/src/scripts/setup.sql' '@churn_prediction_package.churn.churn_pr...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:query: [CREATE APPLICATION churn_prediction_package_APP FROM APPLICATION PACKAGE churn_p...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 2
+INFO:snowflake.connector.cursor:query: [ALTER APPLICATION PACKAGE "CHURN_PREDICTION_PACKAGE" ADD VERSION "v1" USING '@ch...]
+INFO:snowflake.connector.cursor:query execution done
+INFO:snowflake.connector.cursor:Number of results in first chunk: 1
+INFO:snowflake.connector.cursor:query: [ALTER APPLICATION PACKAGE "CHURN_PREDICTION_PACKAGE" SET DEFAULT RELEASE DIRECTI...]
 INFO:snowflake.connector.cursor:query execution done
 INFO:snowflake.connector.cursor:Number of results in first chunk: 1

@@ -72,7 +72,9 @@ if env == "local":
 
 if env == "app":
     #table = "customer_db.churn.telco_unlabeled"
-    table = "dev_churn_prediction_package.shared_content_schema.telco_unlabeled"
+    #table = "dev_churn_prediction_package.shared_content_schema.telco_unlabeled"
+    # db will be handled by package environment
+    table = "shared_content_schema.telco_unlabeled"
     # table = "reference('telco_unlabeled')"
     udf_prefix = ""
 

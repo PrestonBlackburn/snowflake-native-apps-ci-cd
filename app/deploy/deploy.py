@@ -198,7 +198,7 @@ if __name__ == "__main__":
     parser.add_argument('-e', '--env', help='set the env for deployment')
 
     args = parser.parse_args()
-    print(args.env)
+    print("environment:  ", args.env)
 
     env = args.env
 

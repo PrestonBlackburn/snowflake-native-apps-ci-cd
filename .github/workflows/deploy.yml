@@ -1,0 +1,36 @@
+name: SF Native App Deployment
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy-to-snowflake:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: retreive secret + decode to file
+        env:
+          SF_CREDS: ${{ secrets.SF_CREDS }}
+        run: |
+          echo $SF_CREDS | base64 --decode > sf_account.conifg
+
+      - name: set up python 3.9
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: install-dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: run-deploy-script
+        run: |
+          python app/deploy/deploy.py --env dev
+
+        
+
+
+
+
+

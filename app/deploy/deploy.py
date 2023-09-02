@@ -182,6 +182,10 @@ if __name__ == "__main__":
     deploy_yaml_path = "app/deploy/to_stage.yml"
     conf_path = 'sf_account.config'
 
+    # verify path
+    secrets_exist = os.path.isfile(conf_path)
+    print("secrets file exists: ", secrets_exist)
+
     config = configparser.ConfigParser()
     config.read(conf_path)
     session = Session.builder.configs(dict(config['DEFAULT'])).create()  

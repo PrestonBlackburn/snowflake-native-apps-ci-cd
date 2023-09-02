@@ -12,7 +12,7 @@ jobs:
         env:
           SF_CREDS: ${{ secrets.SF_CREDS }}
         run: |
-          echo $SF_CREDS | base64 --decode > sf_account.conifg
+          echo $SF_CREDS | base64 --decode > sf_account.config
 
       - name: set up python 3.9
         uses: actions/setup-python@v4
